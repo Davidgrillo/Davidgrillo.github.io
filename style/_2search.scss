@@ -48,11 +48,10 @@
             button {
                 border: none;
                 border-radius: 27px;
+                background-color: white;
                 img {
-                    margin-right: 10px;
-                    font-size: 20px;
-                    height: 20px;
                     width: 20px;
+                    height: 20px;
                 }
             }
             button:focus {
@@ -214,27 +213,28 @@
                 }
             }
             ul {
-                list-style-image: url('./img/icon-search.svg');
+                list-style-image: url('../img/icon-search.svg');
             }
             .ulShow {
+                width: 531px;
                 display: block;
                 text-align: start;
                 color: #9CAFC3;
-                width: 531px;
                 font-family: $fontRoboto;
                 font-size: 16px;
                 cursor: pointer;
             }
             .orderInpImg {
+                #btnSearch {
+                    display: block;
+                    order: 1;
+                }
                 input {
                     order: 2;
                     width: 460px;
                 }
-                #btnSearch {
-                    order: 1;
-                }
                 #btnClose {
-                    order: 3;
+                    order: 3
                 }
             }
         }

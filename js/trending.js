@@ -16,30 +16,33 @@ document.getElementById("btnBack").addEventListener('click', backGIF);
 /* document.getElementById("btnNextTreding").addEventListener('click', nextGIF);
 document.getElementById("btnBackTrending").addEventListener('click', backGIF); */
 
-
 function nextGIF() {
     if (countStartTrending < 47 && countEndTrending < 50) {
         countStartTrending++;
         countEndTrending++;
         document.getElementById('sectionTrending').innerText = "";
         createImgTrending();
+
     } else {
-        console.log('Esta posicionado en la ultima imagen.')
+        console.log('Esta posicionado en la última imagen.')
+        countEndTrending = 3;
+        countStartTrending = 0;
+
     }
 }
 
 function backGIF() {
     if (countStartTrending == 0 && countEndTrending == 3) {
-        console.log('Esta posicionado en la primer imagen.')
+        console.log('Esta posicionado en la primera imagen.')
+        countEndTrending = 50;
+        countStartTrending = 47;
     } else {
         countStartTrending--;
         countEndTrending--;
         document.getElementById('sectionTrending').innerText = "";
         createImgTrending();
-
     }
 }
-
 
 function initTrending() {
     let url = `https://api.giphy.com/v1/gifs/trending?api_key=${APIKEY}&limit=50`;
